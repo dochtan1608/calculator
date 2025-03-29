@@ -17,12 +17,35 @@ input.addEventListener("click", (e) => {
   input.blur();
 });
 
+const themeToggle = document.getElementById("themeToggle");
+const themeText = document.getElementById("themeText");
+
+themeToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  document.body.classList.toggle("bright-mode");
+  themeToggle.setAttribute(
+    "aria-label",
+    document.body.classList.contains("bright-mode")
+      ? "Switch to dark mode"
+      : "Switch to light mode"
+  );
+  themeText.textContent = document.body.classList.contains("bright-mode")
+    ? "Light Mode"
+    : "Dark Mode";
+});
+
 arr.forEach((button) => {
   button.addEventListener("click", (e) => {
     if (e.target.innerHTML == "=") {
       try {
-        string = eval(string);
-        input.value = string;
+        if (string === "168") {
+          input.value = "Mahal Kita";
+        } else if (string === "156") {
+          input.value = "Em Yêu Anh";
+        } else {
+          string = eval(string);
+          input.value = string;
+        }
       } catch {
         input.value = "Error";
         input.style.background =
