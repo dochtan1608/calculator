@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 :root {
-  --primary-bg: #2a3b5a;
-  --secondary-bg: #1a263f;
+  --primary-bg: #3b4d6a;
+  --secondary-bg: #2a3750;
   --accent-color: #ff9f80;
   --glow-color: rgba(255, 159, 128, 0.3);
   --shadow-light: rgba(255, 255, 255, 0.15);
@@ -89,17 +89,17 @@ body::after {
   );
   backdrop-filter: blur(15px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  animation: float 3s infinite ease-in-out;
+  animation: float 2.1s infinite ease-in-out;
   transition: transform var(--transition-speed) ease,
     box-shadow var(--transition-speed) ease, animation-play-state 0s;
   position: relative;
-  z-index: 1;
+  z-index: 4;
 }
 
 .calculator:hover {
   transform: translateY(-10px) scale(1.03);
   animation-play-state: paused;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 159, 128, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 255, 255, 0.4);
 }
 
 @keyframes float {
@@ -194,10 +194,9 @@ button:hover::before {
 }
 
 button:hover {
-  transform: translateY(-2px) scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3),
-    -4px -4px 10px rgba(255, 255, 255, 0.15), 4px 4px 10px rgba(0, 0, 0, 0.2),
-    0 0 12px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px) scale(1.1) rotate(7deg);
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.15),
+    4px 4px 10px rgba(0, 0, 0, 0.2), 0 0 12px rgba(255, 255, 255, 0.2);
   background: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.25),
